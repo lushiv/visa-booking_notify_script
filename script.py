@@ -16,8 +16,8 @@ SLEEP_TIME = 10 # seconds
 MAIN_URL = "https://konepembappointment.com/visa/booking"
 
 CONF_JSON = {
-    "api_key": "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",
-    "from_email": "jiwanraikhola@gmail.com",
+    "api_key": "",
+    "from_email": "",
     "to_email": "121ajaya@gmail.com",
     "subject": "Notify For Visa is available"
 }
@@ -66,7 +66,6 @@ def VisbookingScript(url):
                 print("Crawling data::::.....time is::%s......... %s"%(time, class_data[5]))
 
                 if len(class_data) ==6 or class_data[5] =='disabled':
-                #if len(class_data) !=6 or class_data[5] !='disabled':
                     print("valid data is found.......time is %s"%time)
                     send_mail = SendEmailHelperFun("Visa available date is.......%s"%time)
                     if send_mail:
